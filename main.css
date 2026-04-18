@@ -1,0 +1,76 @@
+:root {
+    --bg: #030305;
+    --surface: #0a0a0f;
+    --accent: #00f2ea;
+    --accent-glow: rgba(0, 242, 234, 0.3);
+    --text: #ffffff;
+    --text-dim: #94a3b8;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 0%, #15152e 0%, #030305 70%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+#landingPage {
+    padding: 120px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.account-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 30px;
+}
+
+/* Mobile Fix */
+@media (max-width: 600px) {
+    #landingPage { padding-top: 80px; }
+    .hero-title { font-size: 2.8rem; }
+}
